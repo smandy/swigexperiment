@@ -1,13 +1,11 @@
 import distutils.sysconfig
                
 env = Environment(CPPFLAGS=['-std=c++0x'],
-    SWIGFLAGS=['-python', '-shadow', '-c++'],
-    CPPPATH=[distutils.sysconfig.get_python_inc()],
-    SHLIBPREFIX="" )
+                  SWIGFLAGS=['-python', '-shadow', '-c++'],
+                  CPPPATH=[distutils.sysconfig.get_python_inc()],
+                  )
 
-complex = env.Object('complex.cpp')
 complex = env.SharedObject('complex.cpp')
-
 
 swigEnv = env.Clone()
 swigEnv.AppendUnique( SHLINKFLAGS = ['-rdynamic'] )
