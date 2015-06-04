@@ -11,7 +11,6 @@ complex = env.SharedObject('complex.cpp')
 swigEnv = env.Clone()
 swigEnv.AppendUnique( SHLINKFLAGS = ['-rdynamic'] )
 
-cp = env.Program("complexTest.cpp", LIBS=[complex])
 swigEnv.LoadableModule( '_complexmodule', ['complex.i', complex])
 
 
