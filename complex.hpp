@@ -13,8 +13,13 @@ public:
 
   explicit Complex( int x_ = 0, int y_ = 0) : x(x_), y(y_) {};
 
-  Complex operator+( const Complex &rhs );
-  Complex operator-( const Complex &rhs );
+  inline Complex operator+( const Complex &rhs ) {
+    return Complex(x + rhs.x, y + rhs.y);
+  };
+
+  inline Complex operator-( const Complex &rhs ) {
+    return Complex( x - rhs.x, y - rhs.y);
+  };
 
   std::string toString() const;
 

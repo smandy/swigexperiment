@@ -1,15 +1,5 @@
 #include "complex.hpp"
 
-
-
-Complex Complex::operator+( const Complex &rhs ) {
-    return Complex( x + rhs.x, y + rhs.y);
-};
-
-Complex Complex::operator-( const Complex &rhs ) {
-    return Complex( x + rhs.x, y + rhs.y);
-};
-
 std::string Complex::toString() const {
   std::stringstream ss;
   append(ss);
