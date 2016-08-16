@@ -17,11 +17,11 @@
 
 %include "complex.hpp"
 
- //%feature("python:slot", "tp_repr", functype="reprfunc") Complex::toString;
+ %feature("python:slot", "tp_repr", functype="reprfunc") Complex::toString;
 
- //%rename(__repr__)  Complex::toString() const;
+ %rename(__repr__)  Complex::toString() const;
 
 %extend Complex {
   std::string __repr__() 
-    {  return toString(); }
+    {  return self->toString(); }
  }
