@@ -7,9 +7,7 @@
 #include <string>
 
 #include "complex.hpp"
-
 %}
-
 
 %include "std_string.i"
 
