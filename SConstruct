@@ -9,6 +9,8 @@ env = Environment(CPPFLAGS=['-std=c++0x'],
 
 complex = env.SharedObject('complex.cpp')
 
+embed = env.Program('embed_example.cpp', LIBS=['python3.6m'])
+
 swigEnv = env.Clone()
 
 swigEnv.AppendUnique( SHLINKFLAGS = ['-rdynamic'] )

@@ -2,7 +2,7 @@ import complexmodule as cm
 
 x = cm.Complex(1,2)
 
-print(x)
+print("wookoo")
 
 def ret():
-    return cm.Complex(1,2)
+    return 2.0

@@ -4,3 +4,7 @@
 /complex_wrap.cc
 /complex_wrap.os
 /complexmodule.pyc
+*~
+*.o
+/embed_example
+__pycache__/**
