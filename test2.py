@@ -13,7 +13,7 @@ def get_complex():
 
 def get_addr():
     print("Getting addr")
-    return id(x2)
+    return id(x2.this)
 
 def do_print():
     print(x2)

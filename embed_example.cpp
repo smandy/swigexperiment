@@ -48,26 +48,26 @@ int main(int argc, char *argv[]) {
   std::cout << "Double is " << result << std::endl;
   auto addr = PyLong_AsLong(myResult3);
 
-  auto complex = reinterpret_cast<Complex *>(addr);
-  std::cout << "Addr is " << addr << std::endl;
-
   auto sw = reinterpret_cast<SwigPyObject *>(addr);
   auto complex2 = reinterpret_cast<Complex*>(sw->ptr);
 
-  std::cout << "ptris" << sw->ptr << std::endl;
+  std::cout << "ptr is " << sw->ptr << std::endl;
   std::cout << "Addr is " << addr << std::endl;
 
-  complex->x = 10;
-  complex->y = 20;
-
-  std::cout << "x=" << complex->getX() << " y=" << complex->getY() << std::endl;
-  std::cout << "c=" << complex->toString() << std::endl;
-
+  std::cout << "Before " << std::endl;
+  std::cout << "x2=" << complex2->getX() << " y2=" << complex2->getY() << std::endl;
+  std::cout << "c2=" << complex2->toString() << std::endl;
+  
+  complex2->x = 22;
+  complex2->y = 24;
+  
+  std::cout << "After " << std::endl;
   std::cout << "x2=" << complex2->getX() << " y2=" << complex2->getY() << std::endl;
   std::cout << "c2=" << complex2->toString() << std::endl;
   
   PyRun_SimpleString("test2.do_print()\n");
-
+  PyRun_SimpleString("print('x is %s' % test2.x2)\n");
+  
   Py_Finalize();
   return 0;
 }
