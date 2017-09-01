@@ -1,8 +1,20 @@
 import complexmodule as cm
 
-x = cm.Complex(1,2)
+x2 = cm.Complex(25,3)
 
 print("wookoo")
 
 def ret():
-    return 2.0
+    return 20.0
+
+def get_complex():
+    print("Getting complex")
+    return x2
+
+def get_addr():
+    print("Getting addr")
+    return id(x2)
+
+def do_print():
+    print(x2)
+

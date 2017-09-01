@@ -3,7 +3,7 @@
 #include <iostream>
 #include <sstream>
 
-class Complex {
+struct  Complex {
   int x;
   int y;
 

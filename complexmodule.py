@@ -164,6 +164,14 @@ class Complex(_object):
     __setattr__ = lambda self, name, value: _swig_setattr(self, Complex, name, value)
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, Complex, name)
+    __swig_setmethods__["x"] = _complexmodule.Complex_x_set
+    __swig_getmethods__["x"] = _complexmodule.Complex_x_get
+    if _newclass:
+        x = _swig_property(_complexmodule.Complex_x_get, _complexmodule.Complex_x_set)
+    __swig_setmethods__["y"] = _complexmodule.Complex_y_set
+    __swig_getmethods__["y"] = _complexmodule.Complex_y_get
+    if _newclass:
+        y = _swig_property(_complexmodule.Complex_y_get, _complexmodule.Complex_y_set)
 
     def getX(self) -> "int":
         return _complexmodule.Complex_getX(self)
